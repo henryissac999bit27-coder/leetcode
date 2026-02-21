@@ -2,11 +2,7 @@ class Solution {
     public int countPrimeSetBits(int left, int right) {
         int count1=0;
         for(int i=left;i<=right;i++){
-            String a=Integer.toBinaryString(i);
-            int count=0;
-            for(char c:a.toCharArray()){
-                if(c=='1') count++;
-            }
+            int count=Integer.bitCount(i);
             if(isprime(count)) count1++;
         }
         return count1;
