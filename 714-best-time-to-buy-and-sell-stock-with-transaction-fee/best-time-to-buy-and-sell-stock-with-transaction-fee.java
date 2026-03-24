@@ -10,7 +10,6 @@ class Solution {
                 max+=prices[i]-curr;
                 curr=prices[i];
             }
-            
         }
         return max;
     }
