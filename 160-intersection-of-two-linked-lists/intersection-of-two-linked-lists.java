@@ -10,7 +10,7 @@
  * }
  */
 public class Solution {
-    /*public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode ptr1=headA;
         ListNode ptr2=headB;
         while(ptr1!=ptr2){
@@ -18,8 +18,8 @@ public class Solution {
             ptr2=(ptr2!=null) ? ptr2.next:headA;
         }
         return ptr1;
-    }*/
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    }
+    /*public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         while(headB!=null){
             ListNode temp=headA;
             while(temp!=null){
@@ -31,5 +31,5 @@ public class Solution {
             headB=headB.next;
         }
         return null;
-    }
+    }*/
 }
