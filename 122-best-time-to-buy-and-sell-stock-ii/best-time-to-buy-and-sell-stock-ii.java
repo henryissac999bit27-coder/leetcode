@@ -3,7 +3,9 @@ class Solution {
         int max=0;
         int curr=prices[0];
         for(int i=1;i<prices.length;i++){
-            if(prices[i]>curr) max+=prices[i]-curr;
+            if(curr<prices[i]){
+                max+=prices[i]-curr;
+            }
             curr=prices[i];
         }
         return max;
