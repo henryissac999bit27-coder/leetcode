@@ -1,16 +1,14 @@
 class Solution {
     public int singleNumber(int[] nums) {
-        Map<Integer,Integer> map=new HashMap<>();
-        for(int i:nums){
-            map.put(i,map.getOrDefault(i,0)+1);
+        HashMap<Integer,Integer> hm=new HashMap<>();
+        for(int n:nums){
+            hm.put(n,hm.getOrDefault(n,0)+1);
         }
-        int arr=-1;
-        for(Map.Entry<Integer,Integer> entry:map.entrySet()){
+        for(Map.Entry<Integer,Integer> entry:hm.entrySet()){
             if(entry.getValue()==1){
-                arr=entry.getKey();
-                break;
+                return entry.getKey();
             }
         }
-        return arr;
+        return -1;
     }
 }
