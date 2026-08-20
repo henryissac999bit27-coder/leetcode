@@ -17,10 +17,10 @@ class Solution {
                 last2=nums[i];
             }
         }
-        int[] res=new int[nums.length];
-        int index=0;
-        for(int n:a1) res[index++]=n;
-        for(int n:a2) res[index++]=n;
-        return res;
+        a1.addAll(a2);
+        for(int i=0;i<nums.length;i++){
+            nums[i]=a1.get(i);
+        }
+        return nums;
     }
 }
